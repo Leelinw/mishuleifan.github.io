@@ -6,50 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
     <title>米叔擂饭MI SHU LEI FAN</title>
-    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
-        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- 引用style.css -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- 固定的头部导航栏 -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" style="width: 100%; position: fixed;">
         <div class="container-fluid">
-            <!-- 商标设置 -->
-            <div class="navbar-header" style="height: 100px; padding: 10px 100px 10px 150px;">
-                <img id="tag" src="tag.jpg">
+            <div class="navbar-header">
+                <img src="tag.jpg" alt="" style="height: 40px; margin: 1% 0;">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">米叔擂饭</a>
             </div>
-            <!-- 导航具体内容 -->
-            <div>
-                <ul id="intro" class="nav navbar-nav" style="padding: 25px;">
-                    <li><a href="#" style="color: black; font-size: large;">招新首页</a></li>
-                    <li><a href="#tag1" style="color: black; font-size: large;">项目介绍</a></li>
-                    <li><a href="#tag2" style="color: black; font-size: large;">加盟合作</a></li>
-                    <li><a href="#tag3" style="color: black; font-size: large;">产品展示</a></li>
-                    <li><a href="#tag4" style="color: black; font-size: large;">案例展示</a></li>
-                    <li><a href="#message" style="color: black; font-size: large;">加盟</a></li>
+            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#tag1">项目展示</a></li>
+                    <li><a href="#tag2">加盟合作</a></li>
+                    <li><a href="#tag3">产品展示</a></li>
+                    <li><a href="#tag4">案例展示</a></li>
                 </ul>
             </div>
-            <form class="navbar-form navbar-right" role="search" style="padding: 25px 200px 10px 20px;">
-                <button type="submit" class="btn btn-default">
-                    <a href="#tag5">加入我们</a>
-                </button>
-            </form>
-
         </div>
-    </div>
+    </nav>
+
     <div class="nr">
         <img src="img/mi1.jpg">
         <img id="tag1" src="img/mi2.jpg">
@@ -62,16 +56,26 @@
     </div>
 
     <!-- 投资信息 -->
-    <div id="message">
-        <label for="" style="font-size: x-large;">姓名:</label>
-        <input type="text" name="" id="" style="width: 1100px; margin-left: 10px; height: 40px;">
-        <br><br>
-        <label for="" style="font-size: x-large;">电话:</label>
-        <input type="text" name="" id="" style="width: 1100px; margin-left: 10px; height: 40px;">
-        <br><br>
-        <label for="" style="font-size: x-large;">备注:</label>
-        <input type="text" name="" id="" style="width: 1100px; margin-left: 10px; height: 40px;">
-        <button class="btn btn-primary" style="margin: 20px 600px; font-size: x-large;">提交留言</button>
+    <div class="message">
+        <span>
+            <label for="" style="font-size: x-large;">姓名:<input type="text" name="" id=""
+                    style="width: 80%; height: 60%; border-color:rgb(0,0,0,0.5)">
+            </label>
+        </span>
+        <br>
+        <span>
+            <label for="" style="font-size: x-large;">电话:<input type="text" name="" id=""
+                    style="width: 80%; height: 60%; border-color:rgb(0,0,0,0.5)">
+            </label>
+        </span>
+        <br>
+        <span>
+            <label for="" style="font-size: x-large;">备注:<input type="text" name="" id=""
+                    style="width: 80%; height: 60%; border-color:rgb(0,0,0,0.5)">
+            </label>
+        </span>
+        <br>
+        <button class="btn btn-primary" style="font-size: large; width: 30%; position: center;">提交留言</button>
     </div>
 </body>
 
